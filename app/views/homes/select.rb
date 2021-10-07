@@ -10,5 +10,9 @@ new_words = words.select do |n|
 end
 puts new_words
 
+# selectで抜き出す要素としてscanメソッドを使用、正規表現の意図は「'お'を含む1文字以上」
+new_words = words.select{|n| n.scan(/お.+/)}
+puts new_words
+
 new_words = words.select { |n| n == 'お米食べろ！'}
 puts new_words
